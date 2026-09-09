@@ -1,21 +1,23 @@
+import './Header.css'
+
 const Header = (props) => {
-  const headerStyle = {
-    backgroundColor: '#BEBEBE',
-    padding: '20px',
-    textAlign: 'center',
-    borderBottom: '2px solid #696969',
-  };
-
-  const titleStyle = {
-    fontSize: '24px',
-    margin: '0',
-    color: '#191970',
-  };
   return (
-    <header style={headerStyle}>
-      <h1 style={titleStyle}>{props.title}</h1>
-    </header>
-  );
-}   
+    <header className="header">
+      <div className="header-content">
+        <div className="logo">
+          <span className="logo-icon">🎮</span>
+          <span>{props.title}</span>
+        </div>
 
-export default Header;
+        <nav className="nav">
+          <a href="#inicio">Início</a>
+          <a href="#jogos">Jogos</a>
+          <a href="#carros">Carros</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+  )
+}
+
+export default Header
