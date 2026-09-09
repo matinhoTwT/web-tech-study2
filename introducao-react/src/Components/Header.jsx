@@ -1,19 +1,39 @@
 import './Header.css'
 
-const Header = (props) => {
+const Header = ({ title, paginaAtual, onNavigate }) => {
   return (
     <header className="header">
       <div className="header-content">
-        <div className="logo">
+        <button
+          className="logo"
+          onClick={() => onNavigate('inicio')}
+          aria-label="Ir para o início"
+        >
           <span className="logo-icon">🎮</span>
-          <span>{props.title}</span>
-        </div>
+          <span>{title}</span>
+        </button>
 
         <nav className="nav">
-          <a href="#inicio">Início</a>
-          <a href="#jogos">Jogos</a>
-          <a href="#carros">Carros</a>
-          <a href="#contato">Contato</a>
+          <button
+            className={paginaAtual === 'inicio' ? 'active' : ''}
+            onClick={() => onNavigate('inicio')}
+          >
+            Início
+          </button>
+
+          <button
+            className={paginaAtual === 'sobre' ? 'active' : ''}
+            onClick={() => onNavigate('sobre')}
+          >
+            Sobre
+          </button>
+
+          <button
+            className={paginaAtual === 'faq' ? 'active' : ''}
+            onClick={() => onNavigate('faq')}
+          >
+            FAQ
+          </button>
         </nav>
       </div>
     </header>

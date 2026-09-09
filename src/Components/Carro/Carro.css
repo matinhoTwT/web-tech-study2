@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.carro {
+  font-family: 'Inter', sans-serif;
+  width: 90%;
+  max-width: 334px;
+  margin: 40px auto;
+  padding: 16px;
+  background: #1e293b; /* Fundo principal alterado para azul escuro */
+  color: #f8fafc;      /* Texto principal alterado para branco fosco */
+  border-radius: 8px;
+  border: 1px solid #334155; /* Borda sutil para o modo escuro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Sombra ligeiramente mais intensa */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.carro h2 {
+  color: #f8fafc; /* Cor do título atualizada */
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  letter-spacing: normal;
+  text-shadow: none;
+}
+
+.carro-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.carro-info div {
+  background: #535c68; 
+  padding: 14px 10px;
+  border-radius: 8px;
+  border: 1px solid #475569; 
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.carro-info div:hover {
+  background: #475569; 
+  transform: translateY(-2px);
+  border-color: #64748b; 
+}
+
+.carro-info span {
+  display: block;
+  color: #94a3b8; 
+  margin-bottom: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.carro-info strong {
+  font-size: 16px;
+  color: #ffffff; 
+
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .carro {
+    width: 90%;
+    max-width: 334px;
+    padding: 16px;
+  }
+  .carro h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .carro-info {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .carro-info div {
+    padding: 12px 10px;
+  }
+}
