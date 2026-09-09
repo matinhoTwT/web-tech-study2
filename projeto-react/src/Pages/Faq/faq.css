@@ -1,0 +1,25 @@
+.faq-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.faq-item {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.faq-item button {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    background: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 15px;
+    background: #f5f5f5;
+}

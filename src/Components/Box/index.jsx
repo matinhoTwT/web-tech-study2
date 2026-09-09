@@ -12,7 +12,7 @@ function Box() {
             textBox: "Lorem ipsum box 2",
             link: "#"
         },
-           {
+        {
             title: "Box 3",
             textBox: "Lorem ipsum box 3",
             link: "#"
@@ -26,8 +26,8 @@ function Box() {
             {boxData.map((box) => {
                 console.log(box)
                 return (
-                    <div className='box'>
-                        <h2>{Box.title}</h2>
+                    <div className='box' key={box.title}>
+                        <h2>{box.title}</h2>
                         <p>{box.textBox}</p>
                         <a href="#">{box.link}</a>
                     </div>

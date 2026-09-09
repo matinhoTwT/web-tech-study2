@@ -12,22 +12,38 @@ function App() {
     <>
       <Header title="Meu site" />
 
-      <Count />
+      <main>
+        <section id="count">
+          <Count />
+        </section>
 
-      <Box />
+        <section id="box">
+          <Box />
+        </section>
 
-      <ImgCard caption="Lorem ipsum dolor sit amet," />
+        <section id="img-card">
+          <ImgCard caption="Lorem ipsum dolor sit amet," />
+        </section>
 
-      <Banner>
-        <h1>Bem-Vindo ao meu site</h1>
-        <p>Aqui você encontrará conteúdos sobre desenvolvimento web.</p>
-      </Banner>
+        <section id="banner">
+          <Banner>
+            <h1>Bem-Vindo ao meu site</h1>
+            <p>Aqui você encontrará conteúdos sobre desenvolvimento web.</p>
+          </Banner>
+        </section>
 
-      <Card />
+        <section id="card">
+          <Card />
+        </section>
 
-      <Carro />
+        <section id="carro">
+          <Carro />
+        </section>
+      </main>
 
-      <Footer title="new Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+      <section id="footer">
+        <Footer title="new Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+      </section>
     </>
   );
 }
