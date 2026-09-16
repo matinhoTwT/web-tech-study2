@@ -4,6 +4,18 @@
   padding-bottom: 50px;
 }
 
+.sobre-status {
+  max-width: 1050px;
+  margin: 50px auto;
+  padding: 35px 20px;
+  color: var(--text);
+  text-align: center;
+}
+
+.sobre-erro {
+  color: #b91c1c;
+}
+
 .sobre-hero {
   max-width: 1050px;
   margin: 50px auto 35px;
@@ -167,7 +179,7 @@
   margin: 12px 0;
 }
 
-.faq-header > p {
+.faq-header>p {
   max-width: 650px;
   margin: 0 auto;
 

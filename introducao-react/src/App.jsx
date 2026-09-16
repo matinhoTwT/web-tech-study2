@@ -6,6 +6,7 @@ import Footer from './Components/footer.jsx'
 import ImgCard from './Components/ImgCard.jsx'
 import GameCard from './Components/GameCard.jsx'
 import CarroCard from './Components/CarroCard.jsx'
+import Sobre from './Components/Sobre.jsx'
 import './App.css'
 
 function App() {
@@ -48,64 +49,7 @@ function App() {
 
   const renderConteudo = () => {
     if (pagina === 'sobre') {
-      return (
-        <main className="sobre-page">
-          <section className="sobre-hero">
-            <div>
-              <span className="sobre-tag">SOBRE O PROJETO</span>
-              <h1>Conheça o nosso projeto</h1>
-              <p>
-                Uma aplicação desenvolvida para colocar em prática os
-                principais conceitos do desenvolvimento web com React.
-              </p>
-            </div>
-
-            <div className="sobre-icon">⚛️</div>
-          </section>
-
-          <section className="sobre-grid">
-            <article className="sobre-card">
-              <span className="card-icon">💡</span>
-              <h2>Objetivo</h2>
-              <p>
-                O objetivo do projeto é desenvolver uma interface moderna,
-                organizada e responsiva, aplicando conceitos aprendidos
-                durante as aulas.
-              </p>
-            </article>
-
-            <article className="sobre-card">
-              <span className="card-icon">⚛️</span>
-              <h2>React</h2>
-              <p>
-                A aplicação utiliza componentes React para organizar os
-                elementos da interface e facilitar a manutenção do código.
-              </p>
-            </article>
-
-            <article className="sobre-card">
-              <span className="card-icon">📱</span>
-              <h2>Responsividade</h2>
-              <p>
-                O layout foi pensado para funcionar corretamente em diferentes
-                tamanhos de tela, incluindo computadores, tablets e celulares.
-              </p>
-            </article>
-          </section>
-
-          <section className="sobre-tecnologias">
-            <h2>Tecnologias utilizadas</h2>
-
-            <div className="tech-list">
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Vite</span>
-            </div>
-          </section>
-        </main>
-      )
+      return <Sobre />
     }
 
     if (pagina === 'faq') {
@@ -134,9 +78,8 @@ function App() {
             {perguntasFiltradas.length > 0 ? (
               perguntasFiltradas.map((item, index) => (
                 <article
-                  className={`faq-item ${
-                    aberta === index ? 'faq-aberta' : ''
-                  }`}
+                  className={`faq-item ${aberta === index ? 'faq-aberta' : ''
+                    }`}
                   key={item.pergunta}
                 >
                   <button
