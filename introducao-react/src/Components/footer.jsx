@@ -14,6 +14,7 @@ const Footer = (props) => {
         </div>
 
         <div className="footer-section">
+          
           <h3>Redes Sociais</h3>
 
           <div className="social-links">
