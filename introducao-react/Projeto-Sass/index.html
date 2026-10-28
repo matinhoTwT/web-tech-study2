@@ -1,47 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha landing page</title>
+    <title>Apex Track Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h2>Minha Empresa</h2>
- 
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Serviços</a>
-                <a href="#">Contatos</a>
+
+    <header class="header">
+        <div class="container header__conteudo">
+            <a href="#" class="logo">APEX<span>TRACK DAY</span></a>
+
+            <nav class="menu">
+                <a href="#eventos">Eventos</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#planos">Planos</a>
+                <a href="#contato">Contato</a>
             </nav>
-        </header>
-        <aside class="banner">
-            <h1>Bem-vindo ao nosso Site</h1>
-            <p>Conheça nossos serviços e soluções</p>
-            <a href="#" class="botao">Saiba mais</a>
-        </aside>
-       
-        <section class="servicos">
-            <div class="card">
-                <h3>Desenvolvimento Web</h3>
-                <p>Criamos sites modernos e responnsivos.</p>
+
+            <a href="#planos" class="botao botao--primario botao--pequeno">Inscreva-se</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero__conteudo">
+            <span class="hero__selo">Temporada 2026</span>
+            <h1 class="hero__titulo">Acelere no <span>seu limite</span></h1>
+            <p class="hero__texto">
+                Leve seu carro para a pista com segurança, instrutores e cronometragem
+                profissional. Sem radar, sem trânsito, só você e o traçado.
+            </p>
+
+            <div class="hero__botoes">
+                <a href="#eventos" class="botao botao--primario">Ver calendário</a>
+                <a href="#planos" class="botao botao--contorno">Conhecer planos</a>
             </div>
- 
-            <div class="card">
-                <h3>Design</h3>
-                <p>Criamos layouts simples e criativos.</p>
+
+            <ul class="numeros">
+                <li class="numeros__item"><strong>12</strong> etapas no ano</li>
+                <li class="numeros__item"><strong>4</strong> autódromos</li>
+                <li class="numeros__item"><strong>300+</strong> pilotos</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="secao" id="eventos">
+        <div class="container">
+            <h2 class="secao__titulo">Próximos eventos</h2>
+            <p class="secao__subtitulo">Garanta sua vaga: cada etapa tem no máximo 40 carros.</p>
+
+            <div class="eventos">
+                <article class="evento evento--street">
+                    <div class="evento__data">
+                        <strong>15</strong>
+                        <span>NOV</span>
+                    </div>
+                    <div class="evento__info">
+                        <span class="tag tag--street">Street</span>
+                        <h3>Etapa 10 · Interlagos</h3>
+                        <p>São Paulo – SP · 4 sessões de 20 min</p>
+                    </div>
+                </article>
+
+                <article class="evento evento--pro">
+                    <div class="evento__data">
+                        <strong>06</strong>
+                        <span>DEZ</span>
+                    </div>
+                    <div class="evento__info">
+                        <span class="tag tag--pro">Pro</span>
+                        <h3>Etapa 11 · Velocitta</h3>
+                        <p>Mogi Guaçu – SP · 5 sessões de 25 min</p>
+                    </div>
+                </article>
+
+                <article class="evento evento--drift">
+                    <div class="evento__data">
+                        <strong>20</strong>
+                        <span>DEZ</span>
+                    </div>
+                    <div class="evento__info">
+                        <span class="tag tag--drift">Drift</span>
+                        <h3>Etapa 12 · Velopark</h3>
+                        <p>Nova Santa Rita – RS · Pista de drift livre</p>
+                    </div>
+                </article>
             </div>
- 
-            <div class="card">
-                <h3>Consultoria</h3>
-                <p>Ajudamos sua empressa com tecnologia.</p>
+        </div>
+    </section>
+
+    <section class="secao secao--escura" id="categorias">
+        <div class="container">
+            <h2 class="secao__titulo">Categorias</h2>
+            <p class="secao__subtitulo">Escolha a que combina com você e com o seu carro.</p>
+
+            <div class="categorias">
+                <div class="categoria categoria--street">
+                    <span class="categoria__numero">01</span>
+                    <h3>Street</h3>
+                    <p>Para quem está começando. Carro de rua, pneu de rua e instrutor no banco do carona.</p>
+                </div>
+
+                <div class="categoria categoria--pro">
+                    <span class="categoria__numero">02</span>
+                    <h3>Pro</h3>
+                    <p>Carros preparados e pilotos experientes. Cronometragem por volta e ranking da temporada.</p>
+                </div>
+
+                <div class="categoria categoria--drift">
+                    <span class="categoria__numero">03</span>
+                    <h3>Drift</h3>
+                    <p>Área exclusiva para treinar controle de carro de lado, com fumaça e muita derrapagem.</p>
+                </div>
             </div>
-        </section>
-        <footer>
-            <p>2026 - Minha empressa</p>
-        </footer>
-    </div>
+        </div>
+    </section>
+
+    <section class="secao" id="planos">
+        <div class="container">
+            <h2 class="secao__titulo">Planos</h2>
+            <p class="secao__subtitulo">Valores por etapa. Seguro e equipe de resgate inclusos.</p>
+
+            <div class="planos">
+                <div class="plano">
+                    <h3>Iniciante</h3>
+                    <p class="plano__preco">R$ 450</p>
+                    <ul>
+                        <li>4 sessões na pista</li>
+                        <li>Briefing de segurança</li>
+                        <li>Instrutor no carro</li>
+                    </ul>
+                    <a href="#contato" class="botao botao--contorno">Quero esse</a>
+                </div>
+
+                <div class="plano plano--destaque">
+                    <span class="plano__selo">Mais escolhido</span>
+                    <h3>Piloto</h3>
+                    <p class="plano__preco">R$ 890</p>
+                    <ul>
+                        <li>5 sessões na pista</li>
+                        <li>Cronometragem por volta</li>
+                        <li>Vídeo onboard da sessão</li>
+                    </ul>
+                    <a href="#contato" class="botao botao--primario">Quero esse</a>
+                </div>
+
+                <div class="plano">
+                    <h3>Equipe</h3>
+                    <p class="plano__preco">R$ 2.400</p>
+                    <ul>
+                        <li>Até 4 pilotos</li>
+                        <li>Box exclusivo</li>
+                        <li>Telemetria completa</li>
+                    </ul>
+                    <a href="#contato" class="botao botao--contorno">Quero esse</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
+        <div class="container footer__conteudo">
+            <div>
+                <a href="#" class="logo">APEX<span>TRACK DAY</span></a>
+                <p>Projeto de estudo com HTML e Sass.</p>
+            </div>
+
+            <div class="footer__contato">
+                <p>contato@apextrackday.com</p>
+                <p>(11) 99999-0000</p>
+            </div>
+        </div>
+        <p class="footer__copy">2026 · Apex Track Day</p>
+    </footer>
+
 </body>
 </html>

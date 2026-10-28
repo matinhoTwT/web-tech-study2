@@ -1,0 +1,94 @@
+@use 'variaveis' as *;
+@use 'funcoes' as *;
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $fonte-texto;
+    background: $cor-fundo;
+    color: $cor-texto;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: $largura-max;
+    margin: 0 auto;
+    padding: 0 $espacamento;
+}
+
+.botao {
+    &--primario {
+        @include botao($cor-destaque);
+    }
+
+    &--contorno {
+        @include botao($cor-destaque);
+        background: transparent;
+        color: $cor-destaque;
+
+        &:hover {
+            color: $cor-fundo;
+        }
+    }
+
+    &--pequeno {
+        padding: rem(10) rem(18);
+        font-size: rem(13);
+    }
+}
+
+.secao {
+    padding: $espacamento * 4 0;
+
+    &--escura {
+        background: $cor-superficie;
+    }
+
+    &__titulo {
+        @extend %titulo-corrida;
+        font-size: rem(52);
+        text-align: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            margin: rem(12) auto 0;
+            background: $cor-destaque;
+        }
+    }
+
+    &__subtitulo {
+        text-align: center;
+        color: $cor-texto-suave;
+        margin: rem(16) 0 $espacamento * 2.5;
+    }
+}
+
+.tag {
+    display: inline-block;
+    padding: rem(3) rem(10);
+    border-radius: 4px;
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @each $nome, $cor in $categorias {
+        &--#{$nome} {
+            background: rgba($cor, 0.15);
+            color: $cor;
+        }
+    }
+}

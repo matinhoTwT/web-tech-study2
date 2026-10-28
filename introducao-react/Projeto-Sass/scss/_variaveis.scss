@@ -1,0 +1,26 @@
+$cor-fundo: #0e0f13;
+$cor-superficie: #17191f;
+$cor-borda: #2a2d36;
+$cor-texto: #e8e9ed;
+$cor-texto-suave: #9aa0ad;
+$cor-destaque: #ffcc00;
+$cor-alerta: #ff3b30;
+
+$fonte-titulo: 'Bebas Neue', Impact, sans-serif;
+$fonte-texto: 'Inter', Arial, Helvetica, sans-serif;
+
+$espacamento: 20px;
+$raio: 10px;
+$largura-max: 1140px;
+$transicao: 0.3s ease;
+
+$breakpoints: (
+    celular: 600px,
+    tablet: 900px
+);
+
+$categorias: (
+    street: #3b82f6,
+    pro: $cor-destaque,
+    drift: $cor-alerta
+);

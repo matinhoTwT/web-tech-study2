@@ -1,0 +1,53 @@
+@use 'variaveis' as *;
+@use 'funcoes' as *;
+@use 'mixins' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba($cor-fundo, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid $cor-borda;
+
+    &__conteudo {
+        @include flex($justificar: space-between);
+        height: 72px;
+    }
+}
+
+.logo {
+    @extend %titulo-corrida;
+    font-size: rem(32);
+    color: $cor-destaque;
+    text-decoration: none;
+
+    span {
+        font-size: rem(16);
+        color: $cor-texto;
+        margin-left: rem(6);
+
+        @include responsivo(celular) {
+            display: none;
+        }
+    }
+}
+
+.menu {
+    @include flex($gap: $espacamento * 1.5);
+
+    a {
+        color: $cor-texto-suave;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color $transicao;
+
+        &:hover {
+            color: $cor-destaque;
+        }
+    }
+
+    @include responsivo(tablet) {
+        display: none;
+    }
+}

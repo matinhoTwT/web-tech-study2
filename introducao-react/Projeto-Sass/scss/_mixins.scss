@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use 'sass:color';
+@use 'variaveis' as *;
+@use 'funcoes' as *;
+
+@mixin responsivo($tamanho) {
+    @media (max-width: map.get($breakpoints, $tamanho)) {
+        @content;
+    }
+}
+
+@mixin flex($direcao: row, $alinhar: center, $justificar: flex-start, $gap: $espacamento) {
+    display: flex;
+    flex-direction: $direcao;
+    align-items: $alinhar;
+    justify-content: $justificar;
+    gap: $gap;
+}
+
+@mixin botao($cor, $cor-texto-botao: $cor-fundo) {
+    display: inline-block;
+    padding: rem(14) rem(28);
+    background: $cor;
+    color: $cor-texto-botao;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    border: 2px solid $cor;
+    border-radius: $raio;
+    transition: $transicao;
+
+    &:hover {
+        background: color.adjust($cor, $lightness: -10%);
+        border-color: color.adjust($cor, $lightness: -10%);
+        transform: translateY(-3px);
+    }
+}
+
+%cartao {
+    background: $cor-superficie;
+    border: 1px solid $cor-borda;
+    border-radius: $raio;
+    padding: $espacamento * 1.5;
+    transition: transform $transicao, border-color $transicao;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+}
+
+%titulo-corrida {
+    font-family: $fonte-titulo;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+}

@@ -1,0 +1,64 @@
+@use 'variaveis' as *;
+@use 'funcoes' as *;
+@use 'mixins' as *;
+
+.planos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $espacamento * 1.5;
+    align-items: center;
+
+    @include responsivo(tablet) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.plano {
+    @extend %cartao;
+    @include flex($direcao: column, $alinhar: stretch);
+    position: relative;
+    text-align: center;
+
+    h3 {
+        @extend %titulo-corrida;
+        font-size: rem(34);
+    }
+
+    &__preco {
+        @extend %titulo-corrida;
+        font-size: rem(56);
+        color: $cor-destaque;
+    }
+
+    ul {
+        list-style: none;
+        color: $cor-texto-suave;
+        margin-bottom: $espacamento;
+
+        li {
+            padding: rem(10) 0;
+            border-bottom: 1px solid $cor-borda;
+        }
+    }
+
+    &--destaque {
+        border-color: $cor-destaque;
+        padding: $espacamento * 2.5 $espacamento * 1.5;
+        box-shadow: 0 0 40px rgba($cor-destaque, 0.15);
+    }
+
+    &__selo {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $cor-destaque;
+        color: $cor-fundo;
+        padding: rem(4) rem(14);
+        border-radius: 50px;
+        font-size: rem(12);
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+}

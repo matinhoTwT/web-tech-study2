@@ -1,0 +1,36 @@
+@use 'variaveis' as *;
+@use 'funcoes' as *;
+@use 'mixins' as *;
+
+.footer {
+    background: $cor-superficie;
+    border-top: 4px solid $cor-destaque;
+    padding-top: $espacamento * 3;
+
+    &__conteudo {
+        @include flex($justificar: space-between, $alinhar: flex-start);
+        flex-wrap: wrap;
+        padding-bottom: $espacamento * 2;
+
+        p {
+            color: $cor-texto-suave;
+            margin-top: rem(8);
+        }
+    }
+
+    &__contato {
+        text-align: right;
+
+        @include responsivo(celular) {
+            text-align: left;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        padding: $espacamento;
+        border-top: 1px solid $cor-borda;
+        color: $cor-texto-suave;
+        font-size: rem(14);
+    }
+}
